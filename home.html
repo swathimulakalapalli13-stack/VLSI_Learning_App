@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VLSI Learning App</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">VLSI Learning</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+            <li><a href="/interview">Interview Questions</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="content">
+        <h1>Welcome to VLSI Learning App</h1>
+        <p>Learn CMOS, Verilog, STA and Physical Design</p>
+
+        <a href="/learn"><button>Start Learning</button></a>
+    </section>
+
+</body>
+</html>
