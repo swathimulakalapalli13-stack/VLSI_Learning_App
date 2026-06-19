@@ -1,16 +1,90 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>VLSI Learning App</title>
 
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!-- Safe favicon (no error even if missing) -->
+    <link rel="icon" href="data:,">
+
+    <!-- CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        nav {
+            background: #0d1b2a;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #1b263b;
+        }
+
+        p {
+            font-size: 18px;
+            color: #415a77;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background: #00d4ff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #009ec3;
+        }
+    </style>
 </head>
 
 <body>
 
     <nav>
         <div class="logo">VLSI Learning</div>
+
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/learn">Learn</a></li>
@@ -20,12 +94,14 @@
         </ul>
     </nav>
 
-    <section class="content">
-        <h1>VLSI Learning App Working 🚀</h1>
+    <div class="content">
+        <h1>VLSI Learning App 🚀</h1>
         <p>Learn CMOS, Verilog, STA and Physical Design</p>
 
-        <a href="/learn"><button>Start Learning</button></a>
-    </section>
+        <a href="/learn">
+            <button>Start Learning</button>
+        </a>
+    </div>
 
 </body>
 </html>
